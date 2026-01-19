@@ -1,0 +1,37 @@
+package com.thatguyjupe.hylink;
+
+import com.hypixel.hytale.logger.HytaleLogger;
+import com.hypixel.hytale.server.core.event.events.player.PlayerChatEvent;
+import com.hypixel.hytale.server.core.plugin.JavaPlugin;
+import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
+
+import javax.annotation.Nonnull;
+
+/**
+ * This class serves as the entrypoint for your plugin. Use the setup method to register into game registries or add
+ * event listeners.
+ */
+public class HylinkPlugin extends JavaPlugin {
+    private static Config config;
+
+    public static Config getConfig() {
+        return config;
+    }
+
+    private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
+
+    public HylinkPlugin(@Nonnull JavaPluginInit init) {
+        super(init);
+        LOGGER.atInfo().log("Hello from " + this.getName() + " version " + this.getManifest().getVersion().toString());
+    }
+
+    @Override
+    protected void setup() {
+
+        LOGGER.atInfo().log("Setting up plugin " + this.getName());
+        this.getCommandRegistry().registerCommand(new HylinkCommand());
+        this.getEventRegistry().registerGlobal(PlayerChatEvent.class, ChatEventListener::onPlayerChat);
+        config = new Config();
+
+    }
+}

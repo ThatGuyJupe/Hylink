@@ -1,0 +1,22 @@
+{
+    "Group": "thatguyjupe",
+    "Name": "Hylink",
+    "Version": "0.1",
+    "Description": "A Hytale to Discord chat plugin!!",
+    "Authors": [
+        {
+            "Name": "ThatGuyJupe"
+        }
+    ],
+    "Website": "thatguyjupe.com",
+    "ServerVersion": "*",
+    "Dependencies": {
+        
+    },
+    "OptionalDependencies": {
+        
+    },
+    "DisabledByDefault": false,
+    "Main": "com.thatguyjupe.hylink.HylinkPlugin",
+    "IncludesAssetPack": true
+}
