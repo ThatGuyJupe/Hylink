@@ -1,4 +1,5 @@
-# Hylink
+# Hylink <img width="512" height="512" alt="Hylink" src="https://github.com/user-attachments/assets/f44e1014-1316-4a3a-95a1-b648b7dcd9be" />
+
 A Hytale plugin used to send messages from a Hytale server to a Discord chat through webhooks!
 
 <img width="437" height="86" alt="HylinkWelcome" src="https://github.com/user-attachments/assets/fc7b8cf5-9228-49b6-a248-e176de554642" />
